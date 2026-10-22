@@ -1,0 +1,19 @@
+.note-scene { background: radial-gradient(circle at 50% 30%, #FFE9DA, var(--paper) 70%); }
+.pocket-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+.back-cover { position: relative; width: 74%; max-width: 280px; aspect-ratio: 5 / 7; border-radius: 16px 6px 6px 16px; background: linear-gradient(135deg, #5A2D54, #4A2545 60%, #3E1F3A); box-shadow: 0 26px 40px -18px rgba(74, 37, 69, .7); overflow: hidden; }
+.peek {
+  position: absolute; left: 12%; right: 12%; top: 20%; height: 62%; border-radius: 6px; cursor: grab; touch-action: none;
+  background: #fff repeating-linear-gradient(180deg, transparent 0 21px, rgba(168, 213, 245, .6) 21px 22px);
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, .4); display: flex; justify-content: center; padding-top: 18px;
+}
+.peek span { font-family: var(--hand); font-weight: 700; font-size: 26px; color: var(--pink); }
+.pocket { position: absolute; left: 0; right: 0; bottom: 0; height: 46%; background: linear-gradient(180deg, #3E1F3A, #351A32); border-top: 2px dashed rgba(233, 185, 73, .5); display: grid; place-items: center; }
+.pocket span { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: .2em; color: var(--gold); opacity: .8; }
+.letter {
+  margin-top: 4px; flex: 1; min-height: 0; overflow-y: auto; border-radius: 8px; padding: 26px 22px 22px;
+  background: #fff repeating-linear-gradient(180deg, transparent 0 29px, rgba(168, 213, 245, .5) 29px 30px);
+  box-shadow: var(--shadow); font-family: var(--hand); font-weight: 600; font-size: 22px; line-height: 30px; color: var(--ink);
+}
+.letter p + p { margin-top: 14px; }
+.letter .salute { font-weight: 700; font-size: 26px; }
+.letter .signoff { text-align: right; font-weight: 700; font-size: 28px; color: var(--pink); }

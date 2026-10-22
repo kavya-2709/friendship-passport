@@ -1,0 +1,21 @@
+.visas { display: flex; flex-direction: column; gap: 16px; margin-top: 18px; }
+.visa { position: relative; border-radius: 16px; min-height: 112px; }
+.visa-in {
+  position: relative; height: 100%; min-height: 112px; border-radius: 16px; padding: 12px 16px; background: #fff;
+  border: 2px dashed var(--bg); box-shadow: var(--shadow); overflow: hidden;
+}
+.visa-in::before { content: ""; position: absolute; inset: 0; background: var(--bg); opacity: .22; }
+.visa-top { position: relative; display: flex; justify-content: space-between; }
+.visa-in b { position: relative; display: block; font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.15; margin-top: 4px; padding-right: 70px; }
+.visa-in p { position: relative; padding-right: 74px; font-family: var(--hand); font-weight: 600; font-size: 21px; color: var(--chai); line-height: 1.05; margin-top: 2px; }
+.valid { position: absolute; right: 12px; bottom: 12px; font-family: var(--mono); font-weight: 700; font-size: 11px; color: var(--s-green); border: 2px solid currentColor; border-radius: 6px; padding: 2px 6px; transform: rotate(-10deg); }
+.seal-cover {
+  position: absolute; inset: 0; border-radius: 16px; background: var(--bg); z-index: 2; touch-action: none;
+  display: flex; align-items: center; gap: 12px; padding: 0 18px; text-align: left; cursor: grab;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .55), var(--shadow);
+  background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, .25) 0 8px, transparent 8px 16px);
+}
+.sc-mark { width: 46px; height: 46px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 24px; flex: none; }
+.sc-text { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: .14em; color: var(--ink); }
+.curl { position: absolute; right: 0; top: 0; width: 34px; height: 34px; border-radius: 0 16px 0 0; background: linear-gradient(225deg, var(--paper) 50%, rgba(0, 0, 0, .14) 50%, #fff 64%); animation: curl 1.6s ease-in-out infinite; }
+@keyframes curl { 50% { width: 42px; height: 42px; } }

@@ -1,0 +1,13 @@
+.quiz-area { margin-top: 18px; flex: 1; display: flex; flex-direction: column; }
+.q-card { background: #fff; border-radius: 26px; padding: 22px 18px 16px; box-shadow: var(--shadow); }
+.q { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; }
+.opts { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.opt { display: flex; align-items: center; gap: 12px; text-align: left; padding: 13px 14px; border-radius: 18px; background: var(--paper); border: 2px solid var(--paper-deep); font-weight: 700; font-size: 16px; transition: background .2s, border-color .2s; }
+.opt-letter { width: 28px; height: 28px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-family: var(--mono); font-weight: 700; font-size: 12px; flex: none; border: 1.5px solid var(--paper-deep); }
+.opt.is-right { background: var(--mint); border-color: var(--s-green); }
+.opt.is-wrong { background: #FFE1E8; border-color: var(--pink); }
+.reaction { min-height: 30px; margin-top: 12px; text-align: center; font-family: var(--hand); font-weight: 700; font-size: 23px; color: var(--chai); }
+.q-result { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+.result-stamp { color: var(--s-green); border: 4px solid currentColor; border-radius: 12px; padding: 12px 20px; font-family: var(--mono); font-weight: 700; font-size: 24px; text-align: center; letter-spacing: .06em; background: rgba(191, 232, 207, .3); }
+.result-stamp small { display: block; font-size: 11px; letter-spacing: .2em; }
+.result-line { font-family: var(--hand); font-weight: 700; font-size: 30px; }

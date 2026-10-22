@@ -1,0 +1,10 @@
+{
+  "name": "Friendship Passport",
+  "short_name": "Passport",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF7EC",
+  "theme_color": "#FFF7EC",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

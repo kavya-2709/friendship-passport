@@ -1,0 +1,20 @@
+.id-head { display: flex; justify-content: space-between; margin-top: 8px; }
+.photo {
+  position: relative; margin-top: 12px; height: 34%; min-height: 200px; border-radius: 16px; overflow: hidden;
+  background: linear-gradient(180deg, #FBD3DF, #F6E7D3); display: grid; place-items: end center;
+  box-shadow: inset 0 0 0 2px rgba(45, 34, 53, .08); touch-action: none; cursor: crosshair;
+}
+.holo {
+  position: absolute; inset: 0; pointer-events: none; mix-blend-mode: color-dodge; opacity: .38;
+  background-image: linear-gradient(115deg, transparent 20%, #ff9ac1 32%, #ffe08a 40%, #9ff0d0 48%, #9cc8ff 56%, #d7a6ff 64%, transparent 76%);
+  background-size: 260% 260%;
+}
+.seal {
+  position: absolute; right: 12px; top: 14px; padding: 6px 10px; border: 2.5px solid #fff; border-radius: 8px;
+  font-family: var(--mono); font-weight: 700; font-size: 10px; letter-spacing: .1em; color: #fff;
+  background: rgba(74, 37, 69, .55); backdrop-filter: blur(2px);
+}
+.fields { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.field .lbl { display: block; line-height: 1.3; }
+.field .val { font-family: var(--hand); font-weight: 600; font-size: 27px; line-height: 1; }
+.field .val.red { font-family: var(--mono); font-weight: 700; font-size: 17px; letter-spacing: .14em; color: var(--pink); }

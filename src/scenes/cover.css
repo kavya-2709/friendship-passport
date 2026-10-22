@@ -1,0 +1,51 @@
+.s2 { background: radial-gradient(120% 70% at 50% 42%, var(--aubergine-2) 0%, var(--aubergine) 62%); align-items: center; }
+.s2-stage { flex: 1; width: 100%; display: grid; place-items: center; perspective: 1600px; }
+
+.book { position: relative; width: min(66vw, 262px); aspect-ratio: 5 / 7; transform-style: preserve-3d; outline: none; }
+
+/* first inside page */
+.leaf {
+  position: absolute; inset: 0; border-radius: 6px 12px 12px 6px; background: var(--ivory);
+  display: flex; flex-direction: column; justify-content: center; padding: 0 24px; gap: 10px;
+  box-shadow: inset 10px 0 18px -12px rgba(48, 33, 52, .35);
+}
+.leaf-meta { color: var(--plum-soft); }
+.leaf-name { font-family: var(--serif); font-size: 46px; line-height: .95; color: var(--plum); letter-spacing: -0.01em; }
+.leaf-rule { width: 44px; height: 1px; background: var(--rose); }
+
+/* the cover hinges on its spine */
+.cover-3d {
+  position: absolute; inset: 0; transform-origin: left center; transform-style: preserve-3d;
+  border-radius: 6px 12px 12px 6px; cursor: grab; touch-action: pan-y;
+}
+.face { position: absolute; inset: 0; border-radius: inherit; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; }
+.face.back { transform: rotateY(180deg); background: var(--ivory-deep); display: grid; place-items: center; }
+
+.face.front {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .28) 0, rgba(0, 0, 0, 0) 7%, rgba(255, 255, 255, .04) 8%, rgba(0, 0, 0, 0) 10%),
+    linear-gradient(165deg, #4B2F50 0%, #3A2340 55%, #301C35 100%);
+  color: var(--gold-ed);
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 30px 22px 22px;
+}
+.face.front::before { /* restrained leather grain */
+  content: ""; position: absolute; inset: 0; opacity: .12; mix-blend-mode: overlay; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.frame { position: absolute; inset: 11px 11px 11px 17px; border: 1px solid rgba(201, 162, 74, .55); border-radius: 3px 7px 7px 3px; pointer-events: none; }
+.frame::after { content: ""; position: absolute; inset: 3px; border: .5px solid rgba(201, 162, 74, .3); border-radius: 2px 5px 5px 2px; }
+
+.cv-kicker { position: relative; font-family: var(--sans); font-weight: 600; font-size: 9.5px; letter-spacing: .32em; padding-left: .32em; }
+.cv-seal { position: relative; width: 44%; color: var(--gold-ed); margin-top: -4px; }
+.cv-names { position: relative; display: flex; flex-direction: column; align-items: center; font-family: var(--serif); font-weight: 400; line-height: .92; color: var(--ivory); letter-spacing: -0.01em; }
+.cv-names span { font-size: clamp(34px, 10.5vw, 42px); }
+.cv-names em { font-size: 26px; color: var(--gold-ed); margin: 2px 0; }
+.cv-foot { position: relative; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 6px; font-family: var(--sans); font-weight: 600; font-size: 9px; letter-spacing: .22em; }
+.chip-mark { width: 26px; height: 19px; color: var(--gold-ed); opacity: .85; }
+.sheen { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .5) 48%, transparent 64%); pointer-events: none; }
+
+.s2-hint {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+  font-family: var(--sans); font-weight: 600; font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: rgba(251, 245, 236, .72);
+}
+.hint-rule { width: 28px; height: 1px; background: var(--gold-ed); }

@@ -1,0 +1,25 @@
+.rm-stage { position: relative; flex: 1; min-height: 0; }
+.story {
+  position: absolute; left: 5%; top: 5%; width: 80%; aspect-ratio: 9 / 15; max-height: 94%;
+  border-radius: 24px; overflow: hidden; background: #2E3A55;
+  box-shadow: 0 22px 36px -18px rgba(74, 37, 69, .6);
+}
+.story-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.story::after { /* keeps the story header readable over the photo */
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 22%; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, 0));
+}
+.bars { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; gap: 4px; z-index: 2; }
+.bars i { flex: 1; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .5); transform-origin: left; display: block; }
+.bars i:first-child { background: #fff; }
+.who { position: absolute; top: 22px; left: 10px; z-index: 2; display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .35); }
+.who span { width: 28px; height: 28px; border-radius: 50%; background: #FBD3DF; border: 2px solid #fff; display: grid; place-items: end center; overflow: hidden; }
+.loc { position: absolute; left: 18%; top: 62%; z-index: 2; background: #fff; border-radius: 10px; padding: 7px 12px; font-family: var(--display); font-weight: 600; font-size: 17px; transform: rotate(-5deg); box-shadow: 0 6px 12px -6px rgba(0, 0, 0, .35); }
+.scribble {
+  position: absolute; right: -6px; top: 0; width: 64%; z-index: 3; text-align: center;
+  font-family: var(--hand); font-weight: 700; font-size: 34px; line-height: .95; color: var(--pink);
+  text-shadow: 0 0 6px var(--paper), 0 0 3px var(--paper), 0 0 2px var(--paper);
+}
+.scribble small { display: block; font-size: 22px; margin-top: 4px; color: var(--ink); }
+.arrow { position: absolute; left: 50%; top: 21%; width: 17%; height: 42%; z-index: 3; }
+.rm-line { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; text-align: center; margin-bottom: 4px; }
